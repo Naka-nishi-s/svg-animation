@@ -1,0 +1,62 @@
+.line {
+  stroke: #000;
+  stroke-width: 3;
+}
+
+.line2 {
+  stroke: #FFF;
+  stroke-width: 3;
+}
+
+.animation {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation-name: line-draw;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animation2 {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation-name: line-draw2;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes line-draw {
+  0% {
+    stroke-dashoffset: 300;
+    /* 開始時点では線は見えない */
+  }
+
+  80% {
+    stroke-dashoffset: 0;
+    /* 50%までに線を完全に描画 */
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    /* 50%までに線を完全に描画 */
+  }
+}
+
+@keyframes line-draw2 {
+  0% {
+    stroke-dashoffset: 300;
+    /* 開始時点では線は見えない */
+  }
+
+  80% {
+    stroke-dashoffset: 300;
+    /* 50%までに線を完全に描画 */
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    /* 50%までに線を完全に描画 */
+  }
+}
